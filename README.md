@@ -1,12 +1,16 @@
 # onActivityResult-DSL
 A clean way to handle onActivityResult
 
+        private lateinit var selectImage: GetContentObserver
 
-        requireActivity().getContent { result ->
-            put your code
-        }.selectImage()
-        
-        
-        requireActivity().startActivityForResult { result ->
+        //launch 
+        button.onClickListener {
+            startSignInActivity.selectImage()
+        }
+
+        //Must be call in the onCreate()
+        selectImage = requireActivity().getContent { result ->
             put your code
         }
+        
+       
