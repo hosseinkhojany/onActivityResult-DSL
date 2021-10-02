@@ -27,11 +27,15 @@ object ActivityResultObservers {
     /*
     * Example Usage:
     *
-    * requireActivity().getContent { result ->
-            put your code
-        }.selectImage()
-    *
-    * requireActivity().startActivityForResult { result ->
+    *  private lateinit var selectImage: GetContentObserver
+
+        //launch 
+        button.onClickListener {
+            startSignInActivity.selectImage()
+        }
+
+        //Must be call in the onCreate()
+        selectImage = requireActivity().getContent { result ->
             put your code
         }
     *
