@@ -1,5 +1,3 @@
-package adams.sheek.rapcloud.utils.extension
-
 import android.content.Intent
 import android.net.Uri
 import androidx.activity.result.ActivityResult
